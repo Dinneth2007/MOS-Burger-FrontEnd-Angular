@@ -10,4 +10,7 @@ export class MenuItemCardComponent  {
   //Similar to constructor
   @Input()
   public item :any;
+  constructor(){
+    console.log(this.item);
+  }
 }

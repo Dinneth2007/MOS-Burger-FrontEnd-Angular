@@ -1,10 +1,21 @@
 <div class="album py-5 bg-body-tertiary">
+
     <div class="container">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" >
+
+        <div class="row">
+            <app-add-menu-item></app-add-menu-item>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4" >
         <app-menu-item-card 
         *ngFor="let item of listOfProducts"
-        > </app-menu-item-card>
+        [item]="item"
+        > 
+    </app-menu-item-card>
         
         </div>
-    </div>
+    
+
 </div>
+
+

@@ -8,5 +8,12 @@ import { RouterModule } from '@angular/router';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  
+   dateMsg:string="";
+  constructor(){
+    
+    setInterval(()=>{
+      let currentDate= new Date();
+    this.dateMsg=currentDate.toDateString() +" "+ currentDate.toLocaleTimeString();
+    },1000);
+  }
 }
